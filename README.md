@@ -1,3 +1,22 @@
+```bash
+#saving startup script
+
+docker run -it \
+--network host \
+--name hummingbot-instance \
+--mount "type=bind,source=$(pwd)/hummingbot_files/hummingbot_conf,destination=/conf/" \
+--mount "type=bind,source=$(pwd)/hummingbot_files/hummingbot_logs,destination=/logs/" \
+--mount "type=bind,source=$(pwd)/hummingbot_files/hummingbot_data,destination=/data/" \
+--mount "type=bind,source=$(pwd)/hummingbot_files/hummingbot_scripts,destination=/scripts/" \
+--mount "type=bind,source=$(pwd)/humingbot,destination=/scripts/" \
+hbot:0.1
+
+```
+
+
+
+
+
 ![Hummingbot](https://i.ibb.co/X5zNkKw/blacklogo-with-text.png)
 
 ----
